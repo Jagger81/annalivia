@@ -92,11 +92,17 @@ h6 {
 
 #header.header-transparent {
   background: transparent;
+  .logo {
+    opacity: 0;
+  }
 }
 
 #header.header-scrolled {
   background: rgba(55, 142, 181, 0.9);
   padding: 12px;
+  .logo {
+    opacity: 1;
+  }
 }
 
 #header .logo h1 {
@@ -413,7 +419,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 .mainlogo{
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   background-color: rgba(58, 59, 58, 0.6);
   border-radius: 2em;
