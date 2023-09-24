@@ -601,6 +601,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about_image{
+  max-width: 100%;
+  height: auto;
+  border-radius: 2em;
+  margin-top: 120px;
+}
+
 .about {
   background: url("../img/about-bg.jpg") center center no-repeat;
   background-size: cover;
@@ -693,6 +700,16 @@ section {
   }
 }
 
+@media (max-width: 912px) {
+  .about_image{
+    max-width: 90%;
+    height: auto;
+    border-radius: 2em;
+    margin-top: -100px;
+    padding-bottom: 10px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -705,6 +722,7 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  text-align: center;
 }
 
 .services .icon-box::before {
@@ -717,12 +735,14 @@ section {
   top: 100%;
   transition: all 0.3s;
   z-index: -1;
+  text-align: center;
 }
 
 .services .icon-box:hover::before {
   background: #67b0d1;
   top: 0;
   border-radius: 0px;
+  text-align: center;
 }
 
 .services .icon {
@@ -740,21 +760,27 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  text-align: center;
 }
 
 .services .title a {
   color: #111;
+  text-align: center;
 }
 
 .services .description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
+  color: white;
 }
 
-.services .icon-box:hover .title a,
-.services .icon-box:hover .description {
+.services .icon-box:hover .title a {
   color: #fff;
+}
+
+.services .icon-box:hover .description {
+  color: #67b0d1;
 }
 
 .services .icon-box:hover .icon i {
@@ -1116,6 +1142,29 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+.team {
+  background: url("../img/about-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  position: relative;
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 9;
+}
+
+.team .container {
+  position: relative;
+  z-index: 10;
+}
+
 .team .iapclogo {
   text-align: center;
 }
